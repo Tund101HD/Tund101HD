@@ -13,8 +13,8 @@ public class WhoAmI{
     private final void printThings(){
         StringBuilder b = new StringBuilder();
         b.append("I love coding, engineering and solving fun challenges. \n");
-        b.append("Right now, I work as a sound technician at Nathalie's Musikwerkstatt. \n");
-        b.append("My plan is to study aerospace engineering.");
+        b.append("I am engaged in a Working Study for Embedded Systems, Aerospace Engineering @DHBW Ravensburg Campus Friedrichshafen. \n");
+        b.append("I believe in life long learning. \n");
         System.out.println(b.toString());
     }
 
