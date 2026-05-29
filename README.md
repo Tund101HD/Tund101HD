@@ -131,34 +131,13 @@ Rust for systems work, PyTorch for ML on embedded, cloud infra for scaling Circu
   </a>
 </p>
 
-<!-- ──────────────────────────────────────────────────────────
-     GitHub Stats Card (github-readme-stats)
-     
-     The public instance (github-readme-stats.vercel.app) has been
-     paused since Jan 2026. To get a working stats card:
-     
-     1. Fork https://github.com/anuraghazra/github-readme-stats
-     2. Deploy your fork to Vercel (one click)
-     3. Create a GitHub PAT (no scopes needed) and add it as
-        the PAT_1 env var in your Vercel project settings
-     4. Replace YOUR_VERCEL_APP below with your deployment URL
-     
-     <img src="https://YOUR_VERCEL_APP.vercel.app/api?username=Tund101HD&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165" />
-     ────────────────────────────────────────────────────────── -->
-
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Tund101HD&theme=tokyo-night&hide_border=true&area=true" width="95%" />
 </p>
 
-<!-- Snake animation — requires a GitHub Action to generate the SVG daily.
-     Drop snake.yml into .github/workflows/ in your Tund101HD/Tund101HD
-     profile repo, let it run once, then uncomment the block below.
-     See: https://github.com/Platane/snk
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/Tund101HD/Tund101HD/output/github-snake-dark.svg" width="95%" />
 </p>
--->
 
 ---
 
