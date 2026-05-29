@@ -1,64 +1,171 @@
+# Hey there 👋
 
-# Luca Perri / Tund101HD
-```java  
-package me.tund.whoIsTund;
+```asm
+; ──────────────────────────────────────────────────────────
+;  whoami.asm — Luca Perri
+;  nasm -f elf64 whoami.asm && ld -o whoami whoami.o
+; ──────────────────────────────────────────────────────────
 
-public class WhoAmI{
+section .data
+    name    db  "Luca Perri", 0xA
+    nlen    equ $ - name
+    role    db  "Embedded Systems & Aerospace Engineering", 0xA
+    rlen    equ $ - role
+    uni     db  "DHBW Ravensburg - Campus Friedrichshafen", 0xA
+    ulen    equ $ - uni
+    motto   db  "Building tools that bridge bare metal and big ideas.", 0xA
+    mlen    equ $ - motto
 
-    public WhoAmI(){
-        System.out.println("Hi there, I am a passionate coding protege from Germany.");
-        printThings();
-    }
+section .text
+    global _start
 
-    private final void printThings(){
-        StringBuilder b = new StringBuilder();
-        b.append("I love coding, engineering and solving fun challenges. \n");
-        b.append("I am engaged in a Working Study for Embedded Systems, Aerospace Engineering @DHBW Ravensburg Campus Friedrichshafen. \n");
-        b.append("I believe in life long learning. \n");
-        System.out.println(b.toString());
-    }
+_start:
+    mov rax, 1              ; sys_write
+    mov rdi, 1              ; fd = stdout
+    mov rsi, name
+    mov rdx, nlen
+    syscall
 
-}
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, role
+    mov rdx, rlen
+    syscall
+
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, uni
+    mov rdx, ulen
+    syscall
+
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, motto
+    mov rdx, mlen
+    syscall
+
+    mov rax, 60             ; sys_exit
+    xor rdi, rdi            ; exit code 0
+    syscall
 ```
 
+I'm a working student and dual-study engineer from southern Germany. I build developer tools, full-stack applications, and anything that makes circuits — digital or redstone — easier to reason about.
 
-### What I can do;
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white) ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) ![OpenCV](https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
+---
 
-- [x] Code in Java, JavaScript, TypeScript, C++ and Python
-- [x] Use MongoDB, MySQL, MariaDB, Firebase Storage and Redis
-- [x] Develop with ReactJS, NextJS, HTML, CSS and Tailwind
-- [x] Use NextUI or ShadCN with GSAP to create awesome pages
-- [x] Build android apps in Java or Kotlin
-- [x] Work with Rest-Apis and build custom discord bots
-- [x] Work with OpenCV, Tensorflow and YoloV8
-- [x] Develop on Arduino and ESP32
-- [x] Make custom Minecraft plugins with Spigot and NMS
-### What I hope to learn soon;
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![mlflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue) ![nVIDIA](https://img.shields.io/badge/cuda-000000.svg?style=for-the-badge&logo=nVIDIA&logoColor=green) ![Play Store](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white) ![Google Cloud](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white) ![Rust](https://img.shields.io/badge/rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
+## Featured Projects
 
-- [ ] Learn Postgres-SQL and scalable web development
-- [ ] Writing own machine learning algorithms
-- [ ] Minecraft Modding on Fabric
-- [ ] Scalable mobile development
-- [ ] Deepen my knowledge in Java, C++ and Kotlin
-- [ ] How to center a div
-### Interesting repositories:
-- [Irisight]("https://github.com/Irisight"): A competetive project aiming to help visually impaired and blind people
-- [P5Y-Discord]("https://github.com/Tund101HD/P5Y_Discord"): A discord bot that is supposed to enhance our tournament experience
-- [niceeshotss]("https://github.com/Tund101HD/niceeshotss"): My first ever hackathon submission
+### 🔧 [Advanced Assembly for CLion](https://github.com/Tund101HD/clion-assembly-plugin) &nbsp; [![JetBrains Marketplace](https://img.shields.io/badge/Marketplace-Advanced%20Assembly-blue?logo=jetbrains)](https://plugins.jetbrains.com/plugin/31969-advanced-assembly)
 
-Want to know more? Then look at my protfolio site:
+First-class **NASM** (x86/x64) and **MIPS** (MIPS32) support for JetBrains CLion — syntax highlighting, context-aware completion, 11 inspections, cross-file navigation, and a working **QEMU-backed debugger** with gutter breakpoints. Project generation, CMake integration, and transparent WSL support on Windows.
 
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://lucidev.com/)
+`Kotlin` · `JFlex / Grammar-Kit` · `IntelliJ Platform SDK` · `QEMU`
 
-or connect with me on other platforms
+> 🌐 [Feature tour & walkthroughs](https://lucidev.me/tools/clion-assembly-plugin) · 🏪 [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/31969-advanced-assembly)
 
+---
+
+### ⚡ CircuitForge &nbsp; *(work in progress)*
+
+A browser-based redstone circuit editor: drag logic gates onto a canvas, wire them up, and export a **Minecraft schematic** (`.schem` / `.litematic`). The engine handles placement via topological sort + ASAP layering, routes wires with 3D A\*, inserts repeaters, validates signal strength, and detects crosstalk — 156 tests, OpenAPI spec, zero stubs.
+
+**Engine** — `Kotlin/Ktor` · `knbt` · `Supabase` · `A* pathfinding` · `NBT serialization`
+**Web** — `Next.js` · `React Flow` · `Supabase` · `Prisma` · `Tailwind`
+
+---
+
+### 📖 [Okay Jarvis, how do I...?](https://github.com/Tund101HD/Okay-Jarvis-how-do-I-)
+
+A growing knowledge-sharing repo — concise guides and references on topics I've learned the hard way.
+
+---
+
+## Tech I work with
+
+#### Systems & Low-Level
+![C](https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![Assembly](https://img.shields.io/badge/Assembly-NASM%20%7C%20MIPS-6E4C13?style=for-the-badge)
+![Kotlin](https://img.shields.io/badge/Kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
+![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+#### Web & App
+![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Tailwind](https://img.shields.io/badge/Tailwind-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+#### Backend & Data
+![Ktor](https://img.shields.io/badge/Ktor-087CFA?style=for-the-badge&logo=ktor&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
+
+#### Tooling & Platforms
+![JetBrains](https://img.shields.io/badge/IntelliJ%20Platform%20SDK-000000?style=for-the-badge&logo=jetbrains&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white)
+![QEMU](https://img.shields.io/badge/QEMU-FF6600?style=for-the-badge&logo=qemu&logoColor=white)
+
+---
+
+## Currently exploring
+
+![Rust](https://img.shields.io/badge/Rust-%23000000.svg?style=for-the-badge&logo=rust&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Postgres](https://img.shields.io/badge/Postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+
+Rust for systems work, PyTorch for ML on embedded, cloud infra for scaling CircuitForge, and Postgres to replace my current DB stack where it makes sense.
+
+---
+
+## Stats
+
+<p align="center">
+  <a href="https://git.io/streak-stats">
+    <img src="https://streak-stats.demolab.com/?user=Tund101HD&theme=tokyonight&hide_border=true" height="165" />
+  </a>
+</p>
+
+<!-- ──────────────────────────────────────────────────────────
+     GitHub Stats Card (github-readme-stats)
+     
+     The public instance (github-readme-stats.vercel.app) has been
+     paused since Jan 2026. To get a working stats card:
+     
+     1. Fork https://github.com/anuraghazra/github-readme-stats
+     2. Deploy your fork to Vercel (one click)
+     3. Create a GitHub PAT (no scopes needed) and add it as
+        the PAT_1 env var in your Vercel project settings
+     4. Replace YOUR_VERCEL_APP below with your deployment URL
+     
+     <img src="https://YOUR_VERCEL_APP.vercel.app/api?username=Tund101HD&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165" />
+     ────────────────────────────────────────────────────────── -->
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Tund101HD&theme=tokyo-night&hide_border=true&area=true" width="95%" />
+</p>
+
+<!-- Snake animation — requires a GitHub Action to generate the SVG daily.
+     Drop snake.yml into .github/workflows/ in your Tund101HD/Tund101HD
+     profile repo, let it run once, then uncomment the block below.
+     See: https://github.com/Platane/snk
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Tund101HD/Tund101HD/output/github-snake-dark.svg" width="95%" />
+</p>
+-->
+
+---
+
+## Connect
+
+[![Portfolio](https://img.shields.io/badge/lucidev.me-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://lucidev.me/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucag-perri)
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/lucag.perri)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucag-perri)
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/966775587152756766)
-[![twitter](https://img.shields.io/badge/Follow%20me%20on%20X-%20?style=for-the-badge&color=%23000203
-)](https://x.com/LucaG_Perri)
-
-
-
+[![X](https://img.shields.io/badge/Follow%20on%20X-%20?style=for-the-badge&color=%23000203)](https://x.com/LucaG_Perri)
