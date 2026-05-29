@@ -55,17 +55,17 @@ I'm a working student and dual-study engineer from southern Germany. I build dev
 
 ## Featured Projects
 
-### 🔧 [Advanced Assembly for CLion](https://github.com/Tund101HD/clion-assembly-plugin) &nbsp; [![JetBrains Marketplace](https://img.shields.io/badge/Marketplace-Advanced%20Assembly-blue?logo=jetbrains)](https://plugins.jetbrains.com/plugin/31969-advanced-assembly)
+### [Advanced Assembly for CLion](https://github.com/Tund101HD/clion-assembly-plugin) &nbsp; [![JetBrains Marketplace](https://img.shields.io/badge/Marketplace-Advanced%20Assembly-blue?logo=jetbrains)](https://plugins.jetbrains.com/plugin/31969-advanced-assembly)
 
 First-class **NASM** (x86/x64) and **MIPS** (MIPS32) support for JetBrains CLion — syntax highlighting, context-aware completion, 11 inspections, cross-file navigation, and a working **QEMU-backed debugger** with gutter breakpoints. Project generation, CMake integration, and transparent WSL support on Windows.
 
 `Kotlin` · `JFlex / Grammar-Kit` · `IntelliJ Platform SDK` · `QEMU`
 
-> 🌐 [Feature tour & walkthroughs](https://lucidev.me/tools/clion-assembly-plugin) · 🏪 [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/31969-advanced-assembly)
+> [Feature tour & walkthroughs](https://lucidev.me/tools/clion-assembly-plugin) · [JetBrains Marketplace](https://plugins.jetbrains.com/plugin/31969-advanced-assembly)
 
 ---
 
-### ⚡ CircuitForge &nbsp; *(work in progress)*
+### CircuitForge &nbsp; *(work in progress)*
 
 A browser-based redstone circuit editor: drag logic gates onto a canvas, wire them up, and export a **Minecraft schematic** (`.schem` / `.litematic`). The engine handles placement via topological sort + ASAP layering, routes wires with 3D A\*, inserts repeaters, validates signal strength, and detects crosstalk — 156 tests, OpenAPI spec, zero stubs.
 
@@ -74,7 +74,7 @@ A browser-based redstone circuit editor: drag logic gates onto a canvas, wire th
 
 ---
 
-### 📖 [Okay Jarvis, how do I...?](https://github.com/Tund101HD/Okay-Jarvis-how-do-I-)
+### [Okay Jarvis, how do I...?](https://github.com/Tund101HD/Okay-Jarvis-how-do-I-)
 
 A growing knowledge-sharing repo — concise guides and references on topics I've learned the hard way.
 
